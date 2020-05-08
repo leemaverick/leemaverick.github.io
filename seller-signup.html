@@ -72,11 +72,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <?php 
-                            if(isset($_SESSION['customer']))
-                            {
-                                
-                            ?>
+                           
                             <div class="author-author__info inline has_dropdown">
                                 <div class="author__avatar">
                                     <img src="images/avatar.png" alt="user avatar">
@@ -185,10 +181,7 @@
 
                             </div>
                         </div><!-- end /.mobile_content -->
-                        <?php
-                        }
-
-                        ?>
+                      
 
                         <!-- author area restructured for mobile -->
                         
@@ -308,46 +301,7 @@
                             </div>
                             <!-- end .login--form -->
 
-                            <?php
-                        if($_GET['submit']){
-
-                            $uname= $_GET['Username'];
-                            $email= $_GET['Email'];
-                            $phone= $_GET['Phone'];
-                            $street= $_GET['Street'];
-                            $city= $_GET['City'];
-                            $pincode= $_GET['Pincode'];
-                            $passwd= $_GET['Password'];
-                            $cpasswd= $_GET['ConfirmPassword'];
                         
-
-                        if($uname != "" && $email != "" && $phone != "" && $city != "" && $pincode != "" && $passwd != ""){
-
-                            if($passwd == $cpasswd){
-
-                                $query= "INSERT INTO customers values (DEFAULT,'$uname','$email','$street','$city','$pincode','$passwd','$phone')";
-                                $data= mysqli_query($conn, $query);
-
-                                if($data == false){
-                                    echo " All Fields Required ";
-                                }
-                                else{
-                                    $_SESSION['customer']= $uname;
-                                    echo "<script type='text/javascript'>  window.location='user-index.php'; </script>";
-                                }
-
-                            }
-                            else{
-                                echo "Passwords don't Match";
-                            }
-                        }
-                        else{
-                            echo " All Fields Required ";
-                        }
-                    }
-
-                    ?>
-
 
                         </div>
                         <!-- end .cardify -->

@@ -300,31 +300,7 @@
 
                                 <button class="btn btn--md btn--round" type="submit" name="submit">Login Now</button>
 
-                                <?php
-
-                                    if(isset($_POST['submit']))
-                                    {
-                                    $email= $_POST['Email'];
-                                    $passwd= $_POST['Password'];
-
-                                    if($email != "" && $passwd != ""){
-                                        $query= "SELECT * from customers where email='$email' && password='$passwd'";
-                                        $data= mysqli_query($conn, $query);
-                                        $total= mysqli_num_rows($data);
-                                        if($total == 1){
-                                                $_SESSION['customer']= $email;
-                                                echo "<script type='text/javascript'>  window.location='user-index.php'; </script>";
-                                        }
-                                        else{
-                                            echo "\nInvalid Username or Password";
-                                        }
-                                    }
-                                    else{
-                                        echo "\nAll Fields Required";
-                                    }
-                                }
-
-                                ?>
+                                
 
 
                                 <div class="login_assist">
