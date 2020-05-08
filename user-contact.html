@@ -1,5 +1,4 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,9 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Wananai Online Platform">
-    <meta name="keywords" content="wananai, agritech, platform, online, html5">
+    <meta name="keywords" content="marketplace, easy digital download, digital product, digital, html5">
 
 
+    <title>Wananai</title>
 
     <!-- inject:css -->
     <link rel="stylesheet" href="css/animate.css">
@@ -47,7 +47,7 @@
                     <!-- start .col-md-3 -->
                     <div class="col-lg-3 col-md-3 col-6 v_middle">
                         <div class="logo">
-                            <a href="index.html">
+                            <a href="user-index.html">
                                 <img src="images/wana1.png" alt="logo image" class="img-fluid">
                             </a>
                         </div>
@@ -59,18 +59,70 @@
                         <!-- start .author-area -->
                         <div class="author-area">
                             
-                            <a href="signup.html" class="author-area__seller-btn inline">Signup</a>
-                            <a href="login.html" class="author-area__seller-btn inline">Login</a>
-
+                            <a href="seller-signup.html" class="author-area__seller-btn inline">Become A Seller</a>
+                            <a href="seller-signin.html" class="author-area__seller-btn inline">LogIn As Seller</a>
+                            
                             <div class="author__notification_area">
                                 <ul>
                                     <li class="has_dropdown">
                                         <div class="icon_wrap">
+                                            <span class="lnr lnr-alarm"></span>
+                                            
+                                        </div>
+                                    </li>
+
+                                    <li class="has_dropdown">
+                                        <div class="icon_wrap">
+                                            <span class="lnr lnr-envelope"></span>
+                                        </div>
+                                    </li>
+                                    <li class="has_dropdown">
+                                        <div class="icon_wrap">
                                             <span class="lnr lnr-earth"></span>
-                                        </div>                                       
-                                    </li>                                 
+                                            
+                                        </div>
+                                    </li>
                                 </ul>
-                            </div>;
+                            </div>
+                            <?php 
+                            if(isset($_SESSION['customer']))
+                            {
+                                
+                            ?>
+                            <div class="author-author__info inline has_dropdown">
+                                <div class="author__avatar">
+                                    <img src="images/avatar.png" alt="user avatar">
+
+                                </div>
+                                <div class="autor__info">
+                                    <p class="name">
+                                        Test
+                                    </p>
+                                    
+                                </div>
+
+                                <div class="dropdowns dropdown--author">
+                                    <ul>
+                                        <li>
+                                            <a href="user-author.html">
+                                                <span class="lnr lnr-user"></span>Profile</a>
+                                        </li>
+                                        <li>
+                                            <a href="user-topics.html">
+                                                <span class="lnr lnr-upload"></span>Topics</a>
+                                        </li>
+                                        <li>
+                                            <a href="user-how-it-works.html">
+                                                <span class="lnr lnr-book"></span>Help Center</a>
+                                        </li>
+                                        <li>
+                                            <a href="index.html">
+                                                <span class="lnr lnr-exit"></span>Logout</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            
 
                         </div>
                         <!-- end .author-area -->
@@ -82,30 +134,88 @@
                             <div class="offcanvas-menu closed">
                                 <span class="lnr lnr-cross close_menu"></span>
                                 <div class="author-author__info">
-                                    
+                                    <div class="author__avatar v_middle">
+                                        <img src="images/avatar.png" alt="user avatar">
+                                    </div>
                                     <div class="autor__info v_middle">
-
-                                        <p>Please SignUp</p>
-                                        <p>...   Or Log In!</p>
+                                        <p class="name">
+                                            Test
+                                        </p>
+                                       
                                     </div>
                                 </div>
                                 <!--end /.author-author__info-->
 
-                                
-                                
+                                <div class="author__notification_area">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <div class="icon_wrap">
+                                                    <span class="lnr lnr-alarm"></span>
+                                                    
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <div class="icon_wrap">
+                                                    <span class="lnr lnr-envelope"></span>
+                                                    
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li>
+                                            <a href="#">
+                                                <div class="icon_wrap">
+                                                    <span class="lnr lnr-earth"></span>
+                                                    
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                                 <!--start .author__notification_area -->
 
                                 <div class="dropdowns dropdown--author">
-                                    
+                                    <ul>
+                                        <li>
+                                            <a href="user-author.html">
+                                                <span class="lnr lnr-user"></span>Profile</a>
+                                        </li>
+                                       
+                                        <li>
+                                            <a href="user-topics.html">
+                                                <span class="lnr lnr-cog"></span>Topics</a>
+                                        </li>
+                                        
+                                        <li>
+                                            <a href="seller-signin.html">
+                                                <span class="lnr lnr-enter"></span>LogIn As Seller</a>
+                                        </li>
+                                        <li>
+                                            <a href="user-how-it-works.html">
+                                                <span class="lnr lnr-book"></span>Help Center</a>
+                                        </li>
+                                        <li>
+                                            <a href="index.html">
+                                                <span class="lnr lnr-exit"></span>Logout</a>
+                                        </li>
+                                    </ul>
                                 </div>
 
                                 <div class="text-center">
-                                    <a href="signup.html" class="author-area__seller-btn inline">Signup</a>
-                                    <a href="login.html" class="author-area__seller-btn inline">Login</a>
+                                <a href="seller-signup.html" class="author-area__seller-btn inline">Become A Seller</a>
                                 </div>
+
+
                             </div>
-                        </div>
-                        <!-- end /.mobile_content -->
+                        </div><!-- end /.mobile_content -->
+                        <?php
+                        }
+
+                        ?>
 
                         <!-- author area restructured for mobile -->
                         
@@ -149,70 +259,67 @@
                             <div class="collapse navbar-collapse" id="navbarNav">
                                 <ul class="navbar-nav">
                                     <li>
-                                        <a href="index.html">HOME</a>                                       
+                                        <a href="user-index.html">HOME</a>                                       
                                     </li>
                                     <li>
-                                        <a href="all-products.html" id="drop1" class="dropdown-trigger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products and services
+                                        <a href="user-all-products.html" id="drop1" class="dropdown-trigger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Products and services
                                         </a>  
                                         <div class="custom_dropdown dropdown-menu" aria-labelledby="drop1">
                                             <ul>
                                                 <li>
-                                                    <a href="all-products.html">Recent Items</a>
+                                                    <a href="user-all-products.html">Recent Items</a>
                                                 </li>
                                                 <li>
-                                                    <a href="all-products.html">Popular Items</a>
+                                                    <a href="user-all-products.html">Popular Items</a>
                                                 </li>
                                                 
                                                 <li>
-                                                    <a href="all-products.html">Top Sellers</a>
+                                                    <a href="user-all-products.html">Top Sellers</a>
                                                 </li>
                                             </ul>
                                         </div>                                      
                                     </li>
                                     <li class="filter__option filter--dropdown">
-                                        <a href="category-grid.html" id="drop2" class="dropdown-trigger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories
+                                        <a href="user-category-grid.html" id="drop2" class="dropdown-trigger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categories
                                         </a>
                                         <div class="custom_dropdown dropdown-menu" aria-labelledby="drop2">
                                             <ul>
                                                 <li>
-                                                    <a href="category-grid.html">Vegetables</a>
+                                                    <a href="user-category-grid.html">Vegetables</a>
                                                 </li>
                                                 <li>
-                                                    <a href="category-grid.html">Cereals</a>
+                                                    <a href="user-category-grid.html">Cereals</a>
                                                 </li>
                                                 <li>
-                                                    <a href="category-grid.html">Poultry</a>
+                                                    <a href="user-category-grid.html">Poultry</a>
                                                 </li>
                                                 <li>
-                                                    <a href="category-grid.html">Herbs</a>
+                                                    <a href="user-category-grid.html">Herbs</a>
                                                 </li>
                                                 <li>
-                                                    <a href="category-grid.html">Nuts</a>
+                                                    <a href="user-category-grid.html">Nuts</a>
                                                 </li>
                                                 <li>
-                                                    <a href="category-grid.html">Agrochemicals</a>
+                                                    <a href="user-category-grid.html">Agrochemicals</a>
                                                 </li>
                                                 <li>
-                                                    <a href="category-grid.html">Services</a>
+                                                    <a href="user-category-grid.html">Services</a>
                                                 </li>
                                                 <li>
-                                                    <a href="category-grid.html">Land</a>
+                                                    <a href="user-category-grid.html">Land</a>
                                                 </li>
                                                 <li>
-                                                    <a href="category-grid.html">Transport</a>
-                                                </li>
-                                                 <li>
-                                                    <a href="category-grid.html">Equipment</a>
+                                                    <a href="user-category-grid.html">Transport</a>
                                                 </li>
                                             </ul>
                                         </div>
                                     </li>
                                     <li>
-                                        <a href="about.html">About</a>                                        
+                                        <a href="user-about.html">About</a>                                        
                                     </li>
                                     
                                     <li>
-                                        <a href="contact.html">contact us</a>
+                                        <a href="user-contact.html">contact us</a>
                                     </li>
                                 </ul>
                             </div>
@@ -232,25 +339,29 @@
     END MENU AREA
 =================================-->
 
-<title>Log In</title>
+
+<title>Contact</title>
     <!--================================
         START BREADCRUMB AREA
     =================================-->
-    <section class="breadcrumb-area">
+    <section class="breadcrumb-area breadcrumb--center breadcrumb--smsbtl">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
+                    <div class="page_title">
+                        <h3>Contact Us</h3>
+                        <p class="subtitle">You came to the right place</p>
+                    </div>
                     <div class="breadcrumb">
                         <ul>
                             <li>
-                                <a href="index.html">Home</a>
+                                <a href="user-index.html">Home</a>
                             </li>
                             <li class="active">
-                                <a href="#">Login</a>
+                                <a href="#">Contact Us</a>
                             </li>
                         </ul>
                     </div>
-                    <h1 class="page-title">Login</h1>
                 </div>
                 <!-- end /.col-md-12 -->
             </div>
@@ -263,94 +374,86 @@
     =================================-->
 
     <!--================================
-            START LOGIN AREA
+        START AFFILIATE AREA
     =================================-->
-    <section class="login_area section--padding2">
+    <section class="contact-area section--padding">
         <div class="container">
             <div class="row">
-                <div class="col-lg-6 offset-lg-3">
-                    <form action="user-index.html" method="post">
-                        <div class="cardify login">
-                            <div class="login--header">
-                                <h3>Welcome Back</h3>
-                                <p>You can sign in with your email</p>
+                <div class="col-md-12">
+                    <div class="row">
+                        <!-- start col-md-12 -->
+                        <div class="col-md-12">
+                            <div class="section-title">
+                                <h1>How can We
+                                    <span class="highlighted">Help?</span>
+                                </h1>
+                                <p>Need to provide farmers quick and cheap access to suppliers of different inputs
+                                     and services.</p>
                             </div>
-                            <!-- end .login_header -->
-
-                            <div class="login--form">
-                                <div class="form-group">
-                                    <label for="Email">Email</label>
-                                    <input  type="text" value="Email" name="Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}" required="">
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="Password">Password</label>
-                                    <input  type="password" value="Password" name="Password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Password';}" required="">
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="custom_checkbox">
-                                        <input type="checkbox" id="ch2">
-                                        <label for="ch2">
-                                            <span class="shadow_checkbox"></span>
-                                            <span class="label_text">Remember me</span>
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <button class="btn btn--md btn--round" type="submit" name="submit">Login Now</button>
-
-                                <?php
-
-                                    if(isset($_POST['submit']))
-                                    {
-                                    $email= $_POST['Email'];
-                                    $passwd= $_POST['Password'];
-
-                                    if($email != "" && $passwd != ""){
-                                        $query= "SELECT * from customers where email='$email' && password='$passwd'";
-                                        $data= mysqli_query($conn, $query);
-                                        $total= mysqli_num_rows($data);
-                                        if($total == 1){
-                                                $_SESSION['customer']= $email;
-                                                echo "<script type='text/javascript'>  window.location='user-index.php'; </script>";
-                                        }
-                                        else{
-                                            echo "\nInvalid Username or Password";
-                                        }
-                                    }
-                                    else{
-                                        echo "\nAll Fields Required";
-                                    }
-                                }
-
-                                ?>
-
-
-                                <div class="login_assist">
-                                    <p class="recover">Lost your
-                                        <a href="recovery-pass.html">username</a> or
-                                        <a href="recovery-pass.html">password</a>?</p>
-                                    <p class="signup">Don't have an
-                                        <a href="signup.html">account</a>?</p>
-                                </div>
-                            </div>
-                            <!-- end .login--form -->
                         </div>
-                        <!-- end .cardify -->
-                    </form>
-                    
+                        <!-- end /.col-md-12 -->
+                    </div>
+                    <!-- end /.row -->
+
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6">
+                            <div class="contact_tile">
+                                <span class="tiles__icon lnr lnr-map-marker"></span>
+                                <h4 class="tiles__title">Office Address</h4>
+                                <div class="tiles__content">
+                                    <p>000 Masotsha Ndlovu Way, Parktown Waterfalls, Harare</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end /.col-lg-4 col-md-6 -->
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="contact_tile">
+                                <span class="tiles__icon lnr lnr-phone"></span>
+                                <h4 class="tiles__title">Phone Number</h4>
+                                <div class="tiles__content">
+                                    <p>+263 77 123 4567</p>
+                                    <p>+263 71 234 5678</p>
+                                </div>
+                            </div>
+                            <!-- end /.contact_tile -->
+                        </div>
+                        <!-- end /.col-lg-4 col-md-6 -->
+
+                        <div class="col-lg-4 col-md-6">
+                            <div class="contact_tile">
+                                <span class="tiles__icon lnr lnr-inbox"></span>
+                                <h4 class="tiles__title">Email</h4>
+                                <div class="tiles__content">
+                                    <p>support@wananai.com</p>
+                                    <p>info@wananai.com</p>
+                                </div>
+                            </div>
+                            <!-- end /.contact_tile -->
+                        </div>
+                        <!-- end /.col-lg-4 col-md-6 -->
+
+                        <!-- end /.col-md-12 -->
+                    </div>
+                    <!-- end /.row -->
                 </div>
-                <!-- end .col-md-6 -->
+                <!-- end /.col-md-12 -->
             </div>
-            <!-- end .row -->
+            <!-- end /.row -->
         </div>
-        <!-- end .container -->
+        <!-- end /.container -->
     </section>
     <!--================================
-            END LOGIN AREA
+        END BREADCRUMB AREA
     =================================-->
 
+    <!--================================
+            START
+    =================================-->
+    <!-- end /.map -->
+    <!--================================
+            END FAQ AREA
+    =================================-->
  <!--================================
     START FOOTER AREA
 =================================-->
@@ -364,13 +467,13 @@
                             <h4 class="footer-widget-title">Popular Categories</h4>
                             <ul>
                                 <li>
-                                    <a href="category-grid.html">Vegetables</a>
+                                    <a href="user-category-grid.html">Vegetables</a>
                                 </li>
                                 <li>
-                                    <a href="category-grid.html">Cereals</a>
+                                    <a href="user-category-grid.html">Cereals</a>
                                 </li>
                                 <li>
-                                    <a href="category-grid.html">Livestock</a>
+                                    <a href="user-category-grid.html">Livestock</a>
                                 </li>
                                 
                             </ul>
@@ -384,14 +487,14 @@
                             <h4 class="footer-widget-title">Our Company</h4>
                             <ul>
                                 <li>
-                                    <a href="about.html">About Us</a>
+                                    <a href="user-about.html">About Us</a>
                                 </li>
                                 <li>
-                                    <a href="about.html">Our People</a>
+                                    <a href="user-about.html">Our People</a>
                                 </li>
                         
                                 <li>
-                                    <a href="contact.html">Contact Us</a>
+                                    <a href="user-contact.html">Contact Us</a>
                                 </li>
                                 
                             </ul>
@@ -402,7 +505,7 @@
                             <h4 class="footer-widget-title">Help & FAQ's</h4>
                             <ul>
                                 <li>
-                                    <a href="how-it-works.html">How It Works</a>
+                                    <a href="user-how-it-works.html">How It Works</a>
                                 </li>
                                 <li>
                                     <a href="#">Terms & Conditions</a>
